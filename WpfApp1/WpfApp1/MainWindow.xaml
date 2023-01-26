@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Számológép" Height="600" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+    <StackPanel VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Orientation="Horizontal"> 
+            <Label>A szam:</Label>
+            <TextBox Width="100" x:Name="txtAszam" ></TextBox>
+    </StackPanel>
+    <StackPanel Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+            <Label>B szam:</Label>
+            <TextBox Width="100" x:Name="txtBszam"></TextBox>
+    </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+            >
+            <Button x:Name="btnOsszead" Width="50" Content="+" Margin="20 40" Click="btnOsszead_Click"></Button>
+            <Button x:Name="btnKivon" Width="50" Content="-" Margin="20 40" Click="btnKivon_Click"></Button>
+            <Button x:Name="btnSzoroz" Width="50" Content="*" Margin="20 40" Click="btnSzoroz_Click"></Button>
+            <Button x:Name="btnOszt" Width="50" Content="/" Margin="20 40" Click="btnOszt_Click"></Button>
+    </StackPanel>
+
+        <ListBox Grid.Row="2" 
+                 x:Name="lbEredmenyek"
+                 Margin="10"
+                 Grid.ColumnSpan="2"
+                 Background="Cornsilk"/>
+    </Grid>
+</Window>
